@@ -1,0 +1,6 @@
+name: ClamProtectCore
+main: io.wesner.robert.cb1060.clamprotect.core.ClamProtectCore
+version: ${version}
+description: >
+    LogBlock but much less jank.
+commands: {}

@@ -1,0 +1,7 @@
+version = 1
+
+[amqp]
+host = "rabbitmq.localhost"
+port = 5672
+username = "rabbit"
+password = "rabbit"
