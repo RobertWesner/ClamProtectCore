@@ -16,7 +16,6 @@ import io.wesner.robert.cb1060.clamprotect.core.serializableBlockFace
 import io.wesner.robert.cb1060.clamprotect.core.serializableBlockState
 import io.wesner.robert.cb1060.clamprotect.core.serializableLocationInt
 import io.wesner.robert.cb1060.clamprotect.core.serializablePlayer
-import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.block.Block
 import org.bukkit.entity.Player

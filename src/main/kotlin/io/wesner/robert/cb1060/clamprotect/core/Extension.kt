@@ -23,7 +23,7 @@ fun Location.serializableLocationInt() = Part.LocationInt(
 fun Player.serializablePlayer() = Part.Player(
     name = name,
     displayName = displayName,
-    uuid = uniqueId.toString(),
+    uniqueId = uniqueId.toString(),
     address = address.toString(),
     location = location.serializableLocationFloat(),
 )

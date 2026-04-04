@@ -13,6 +13,5 @@ data class Config(
         val port: Int,
         val username: String,
         val password: String,
-    ) {
-    }
+    )
 }

@@ -1,9 +1,6 @@
 package io.wesner.robert.cb1060.clamprotect.core.report
 
-import io.wesner.robert.cb1060.clamprotect.core.serializableLocationFloat
 import kotlinx.serialization.Serializable
-import org.bukkit.block.PistonMoveReaction
-import java.util.UUID
 
 class Part {
     @Serializable
@@ -24,7 +21,7 @@ class Part {
     data class Player(
         val name: String,
         val displayName: String,
-        val uuid: String,
+        val uniqueId: String,
         val address: String,
         val location: LocationFloat,
     )
