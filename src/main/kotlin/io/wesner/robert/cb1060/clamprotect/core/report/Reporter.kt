@@ -18,6 +18,9 @@ import java.util.Collections
 import kotlin.jvm.optionals.getOrNull
 
 class Reporter {
+    private val json = Json {
+        encodeDefaults = true
+    }
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val inFlight = Collections.synchronizedSet(mutableSetOf<Job>())
     private val connection = ConnectionFactory().run {
@@ -60,7 +63,7 @@ class Reporter {
                 EXCHANGE,
                 "$BASE_KEY.${report.key}",
                 null,
-                Json.encodeToString(serializer(), report).toByteArray(),
+                json.encodeToString(serializer(), report).toByteArray(),
             )
         }
 
