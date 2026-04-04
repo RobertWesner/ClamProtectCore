@@ -125,10 +125,10 @@ class BlockListener : Listener {
     // TODO: physics break (will be hell)
     @EventHandler(priority = Event.Priority.Monitor)
     fun onBlockPhysics(event: BlockPhysicsEvent) {
-        Bukkit.getLogger().info { "---" }
-        Bukkit.getLogger().info { event.block.type.toString() }
-        Bukkit.getLogger().info { event.changedType.toString() }
-        Bukkit.getLogger().info { event.changedType.toString() }
+//        Bukkit.getLogger().info { "---" }
+//        Bukkit.getLogger().info { event.block.type.toString() }
+//        Bukkit.getLogger().info { event.changedType.toString() }
+//        Bukkit.getLogger().info { event.changedType.toString() }
     }
 
     @EventHandler(priority = Event.Priority.Monitor)

@@ -34,8 +34,10 @@ fun BlockState.serializableBlockState() = Part.BlockState(
 )
 
 fun Block.serializableBlock() = Part.Block(
-    material = typeId,
-    data = data,
+    state = Part.BlockState(
+        material = typeId,
+        data = data,
+    ),
     world = world.name,
     location = location.serializableLocationInt(),
     pistonMoveReaction = pistonMoveReaction.id,

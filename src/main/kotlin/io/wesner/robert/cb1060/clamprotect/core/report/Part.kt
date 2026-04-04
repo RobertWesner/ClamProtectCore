@@ -37,8 +37,7 @@ class Part {
 
     @Serializable
     data class Block(
-        val material: Int,
-        val data: Byte,
+        val state: BlockState,
         val world: String,
         val location: LocationInt,
         val pistonMoveReaction: Int,
