@@ -3,7 +3,9 @@ package io.wesner.robert.cb1060.clamprotect.core
 import io.wesner.robert.cb1060.clamprotect.core.report.Part
 import org.bukkit.Location
 import org.bukkit.block.Block
+import org.bukkit.block.BlockFace
 import org.bukkit.block.BlockState
+import org.bukkit.entity.Entity
 import org.bukkit.entity.Player
 
 fun Location.serializableLocationFloat() = Part.LocationFloat(
@@ -36,4 +38,18 @@ fun Block.serializableBlock() = Part.Block(
     data = data,
     world = world.name,
     location = location.serializableLocationInt(),
+)
+
+fun BlockFace.serializableBlockFace() = Part.BlockFace(
+    modX = modX,
+    modY = modY,
+    modZ = modZ,
+)
+
+fun Entity.serializableEntity() = Part.Entity(
+    entityClass = javaClass.name,
+    entityId = entityId,
+    uniqueId = uniqueId.toString(),
+    world = world.name,
+    location = location.serializableLocationFloat(),
 )

@@ -1,5 +1,6 @@
 package io.wesner.robert.cb1060.clamprotect.core.report
 
+import io.wesner.robert.cb1060.clamprotect.core.serializableLocationFloat
 import kotlinx.serialization.Serializable
 import java.util.UUID
 
@@ -39,5 +40,21 @@ class Part {
         val data: Byte,
         val world: String,
         val location: LocationInt,
+    )
+
+    @Serializable
+    data class BlockFace(
+        val modX: Int,
+        val modY: Int,
+        val modZ: Int,
+    )
+
+    @Serializable
+    data class Entity(
+        val entityClass: String,
+        val entityId: Int,
+        val uniqueId: String,
+        val world: String,
+        val location: LocationFloat,
     )
 }

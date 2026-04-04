@@ -12,14 +12,15 @@ import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
 
-private var loaded = false
-
 class ClamProtectCore : JavaPlugin() {
     internal val logger: Logger = Bukkit.getLogger()
     internal lateinit var reporter: Reporter
         private set
     lateinit var api: ClamProtectApi
         private set
+    private var loaded
+        get() = System.getProperty(LOADED_FLAG, "0") == "1"
+        set(value) = System.setProperty(LOADED_FLAG, if (value) "1" else "0").let {}
 
     override fun onDisable() {
         reporter.shutdown()
@@ -29,6 +30,15 @@ class ClamProtectCore : JavaPlugin() {
 
     override fun onEnable() {
         if (loaded) {
+            Thread {
+                for (i in (1..5).reversed()) {
+                    Bukkit.getLogger().severe("[$i] SERVER WAS RELOADED INSTEAD OF PROPERLY SHUT DOWN!")
+                    Thread.sleep(1000)
+                }
+
+                Bukkit.shutdown()
+            }.start()
+
             throw ClamProtectReloadDetectedException("Never reload ${description.name}, it requires a full restart!")
         }
         loaded = true
@@ -50,6 +60,7 @@ class ClamProtectCore : JavaPlugin() {
     }
 
     companion object {
+        const val LOADED_FLAG = "ClamProtectCore_Plugin_loaded"
         @JvmStatic
         lateinit var plugin: ClamProtectCore
     }
