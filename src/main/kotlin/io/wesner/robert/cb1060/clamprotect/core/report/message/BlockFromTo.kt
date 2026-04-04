@@ -10,5 +10,5 @@ data class BlockFromTo(
     val block: Part.Block,
     val blockTo: Part.Block,
     val face: Part.BlockFace,
-    override val key: String = "event.block.from-to"
+    override val key: String = "event.block.from-to",
 ) : Report

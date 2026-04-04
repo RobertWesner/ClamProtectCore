@@ -9,5 +9,5 @@ data class BlockFade(
     val time: Instant,
     val block: Part.Block,
     val newState: Part.BlockState,
-    override val key: String = "event.block.form"
+    override val key: String = "event.block.fade",
 ) : Report

@@ -6,7 +6,6 @@ import io.wesner.robert.cb1060.clamprotect.core.listener.BlockListener
 import io.wesner.robert.cb1060.clamprotect.core.listener.ChestListener
 import io.wesner.robert.cb1060.clamprotect.core.listener.EntityListener
 import io.wesner.robert.cb1060.clamprotect.core.listener.PlayerListener
-import io.wesner.robert.cb1060.clamprotect.core.listener.ToolListener
 import io.wesner.robert.cb1060.clamprotect.core.report.Reporter
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
@@ -53,7 +52,6 @@ class ClamProtectCore : JavaPlugin() {
             ChestListener(),
             EntityListener(),
             PlayerListener(),
-            ToolListener(),
         ).forEach { server.pluginManager.registerEvents(it, this) }
 
         logger.info("Enabled ${description.name} version ${description.version}.")

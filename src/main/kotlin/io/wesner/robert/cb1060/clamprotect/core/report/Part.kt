@@ -2,6 +2,7 @@ package io.wesner.robert.cb1060.clamprotect.core.report
 
 import io.wesner.robert.cb1060.clamprotect.core.serializableLocationFloat
 import kotlinx.serialization.Serializable
+import org.bukkit.block.PistonMoveReaction
 import java.util.UUID
 
 class Part {
@@ -40,6 +41,7 @@ class Part {
         val data: Byte,
         val world: String,
         val location: LocationInt,
+        val pistonMoveReaction: Int,
     )
 
     @Serializable

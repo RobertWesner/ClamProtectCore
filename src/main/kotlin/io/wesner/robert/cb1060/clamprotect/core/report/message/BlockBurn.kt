@@ -8,5 +8,5 @@ import kotlin.time.Instant
 data class BlockBurn(
     val time: Instant,
     val block: Part.Block,
-    override val key: String = "event.block.burn"
+    override val key: String = "event.block.burn",
 ) : Report

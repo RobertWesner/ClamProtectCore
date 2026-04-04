@@ -38,6 +38,7 @@ fun Block.serializableBlock() = Part.Block(
     data = data,
     world = world.name,
     location = location.serializableLocationInt(),
+    pistonMoveReaction = pistonMoveReaction.id,
 )
 
 fun BlockFace.serializableBlockFace() = Part.BlockFace(

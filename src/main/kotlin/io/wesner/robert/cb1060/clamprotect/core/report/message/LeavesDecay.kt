@@ -8,5 +8,5 @@ import kotlin.time.Instant
 data class LeavesDecay(
     val time: Instant,
     val block: Part.Block,
-    override val key: String = "event.block.leaves-decay"
+    override val key: String = "event.block.leaves-decay",
 ) : Report

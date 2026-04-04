@@ -10,5 +10,5 @@ data class SignChange(
     val player: Part.Player,
     val block: Part.Block,
     val lines: List<String>,
-    override val key: String = "event.block.sign-change"
+    override val key: String = "event.block.sign-change",
 ) : Report

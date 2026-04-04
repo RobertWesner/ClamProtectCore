@@ -10,5 +10,5 @@ data class BlockPlace(
     val player: Part.Player,
     val block: Part.Block,
     val previous: Part.BlockState,
-    override val key: String = "event.block.place"
+    override val key: String = "event.block.place",
 ) : Report

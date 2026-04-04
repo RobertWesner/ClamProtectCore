@@ -12,5 +12,5 @@ data class EntityExplode(
     val yield: Float,
     val blocks: List<Part.Block>,
     val target: Part.Player?,
-    override val key: String = "event.entity.explode"
+    override val key: String = "event.entity.explode",
 ) : Report

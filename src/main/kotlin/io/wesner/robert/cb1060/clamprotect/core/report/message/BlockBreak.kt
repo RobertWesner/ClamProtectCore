@@ -9,5 +9,5 @@ data class BlockBreak(
     val time: Instant,
     val player: Part.Player,
     val block: Part.Block,
-    override val key: String = "event.block.break"
+    override val key: String = "event.block.break",
 ) : Report

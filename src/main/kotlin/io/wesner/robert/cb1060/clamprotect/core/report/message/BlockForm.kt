@@ -9,5 +9,5 @@ data class BlockForm(
     val time: Instant,
     val block: Part.Block,
     val newState: Part.BlockState,
-    override val key: String = "event.block.form"
+    override val key: String = "event.block.form",
 ) : Report
