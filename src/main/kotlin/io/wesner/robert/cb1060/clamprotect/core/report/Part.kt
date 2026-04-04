@@ -23,6 +23,7 @@ class Part {
         val displayName: String,
         val uniqueId: String,
         val address: String,
+        val world: String,
         val location: LocationFloat,
     )
 

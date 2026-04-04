@@ -25,6 +25,7 @@ fun Player.serializablePlayer() = Part.Player(
     displayName = displayName,
     uniqueId = uniqueId.toString(),
     address = address.toString(),
+    world = world.name,
     location = location.serializableLocationFloat(),
 )
 
