@@ -9,6 +9,6 @@ data class BlockFromTo(
     val time: Instant,
     val block: Part.Block,
     val blockTo: Part.Block,
-    val face: Part.BlockFace,
+    val direction: Part.BlockFace,
     override val key: String = "event.block.from-to",
 ) : Report

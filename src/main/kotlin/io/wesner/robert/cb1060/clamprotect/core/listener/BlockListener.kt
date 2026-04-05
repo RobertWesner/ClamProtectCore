@@ -115,7 +115,14 @@ class BlockListener : Listener {
             event.direction.serializableBlockFace(),
             event.retractLocation.serializableLocationInt(),
             when (event.block.type) {
-                Material.PISTON_STICKY_BASE -> event.block.world.getBlockAt(event.retractLocation).serializableBlock()
+                Material.PISTON_STICKY_BASE -> {
+                    val block = event.block.world.getBlockAt(event.retractLocation)
+                    if (block.type == Material.AIR) {
+                        null
+                    } else {
+                        block.serializableBlock()
+                    }
+                }
                 else -> null
             }
         )
